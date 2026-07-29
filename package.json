@@ -1,5 +1,5 @@
 {
-  "name": "@jschmittler/figma-walkthrough",
+  "name": "figma-walkthrough",
   "version": "1.0.0",
   "description": "Record portfolio-quality automated walkthroughs of remotely hosted Figma prototypes (visible cursor, smooth scrolling) and export high-quality WebM — driven by a simple script.md.",
   "type": "module",

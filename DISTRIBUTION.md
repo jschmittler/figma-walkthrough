@@ -13,7 +13,7 @@ Edit `package.json` and set the real scoped name + repo URL:
 
 ```jsonc
 {
-  "name": "@jschmittler/figma-walkthrough",   // ← your npm scope / name
+  "name": "figma-walkthrough",   // ← your npm scope / name
   "version": "1.0.0",
   "repository": { "type": "git", "url": "https://github.com/jschmittler/figma-walkthrough.git" },
   "publishConfig": { "access": "restricted" }   // "public" for public npm; omit for a private registry
@@ -63,9 +63,9 @@ npm publish --access public
 ```
 Teammates:
 ```bash
-npm i -g @jschmittler/figma-walkthrough      # or use npx with no install
+npm i -g figma-walkthrough      # or use npx with no install
 figma-walkthrough record my-journey.md --url https://my.figma.site
-npx @jschmittler/figma-walkthrough record my-journey.md
+npx figma-walkthrough record my-journey.md
 ```
 
 ### Private / internal registry (GitHub Packages, Artifactory, Verdaccio, …)
@@ -77,7 +77,7 @@ Add an `.npmrc` (do **not** commit tokens):
 ```bash
 npm publish            # publishConfig.access = "restricted"
 ```
-Teammates set the same `@jschmittler:registry` line and `npm i -g @jschmittler/figma-walkthrough`.
+Teammates set the same `@jschmittler:registry` line and `npm i -g figma-walkthrough`.
 
 ### Notes
 - Outputs are written to the **caller's current directory** (`./output`,
