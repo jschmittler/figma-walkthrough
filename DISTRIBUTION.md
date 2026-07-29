@@ -13,9 +13,9 @@ Edit `package.json` and set the real scoped name + repo URL:
 
 ```jsonc
 {
-  "name": "@your-org/figma-walkthrough",   // ← your npm scope / name
+  "name": "@jschmittler/figma-walkthrough",   // ← your npm scope / name
   "version": "1.0.0",
-  "repository": { "type": "git", "url": "https://github.com/your-org/figma-walkthrough.git" },
+  "repository": { "type": "git", "url": "https://github.com/jschmittler/figma-walkthrough.git" },
   "publishConfig": { "access": "restricted" }   // "public" for public npm; omit for a private registry
 }
 ```
@@ -31,7 +31,7 @@ project) and has a git repo initialized with an initial commit. To share it:
 
 ```bash
 # from this directory:
-git remote add origin git@github.com:your-org/figma-walkthrough.git
+git remote add origin git@github.com:jschmittler/figma-walkthrough.git
 git branch -M main
 git push -u origin main
 ```
@@ -39,7 +39,7 @@ git push -u origin main
 Teammates then:
 
 ```bash
-git clone git@github.com:your-org/figma-walkthrough.git
+git clone git@github.com:jschmittler/figma-walkthrough.git
 cd figma-walkthrough
 npm install                       # postinstall downloads Chromium (skippable)
 npx playwright install chromium   # only if the postinstall was skipped
@@ -63,21 +63,21 @@ npm publish --access public
 ```
 Teammates:
 ```bash
-npm i -g @your-org/figma-walkthrough      # or use npx with no install
+npm i -g @jschmittler/figma-walkthrough      # or use npx with no install
 figma-walkthrough record my-journey.md --url https://my.figma.site
-npx @your-org/figma-walkthrough record my-journey.md
+npx @jschmittler/figma-walkthrough record my-journey.md
 ```
 
 ### Private / internal registry (GitHub Packages, Artifactory, Verdaccio, …)
 Add an `.npmrc` (do **not** commit tokens):
 ```
-@your-org:registry=https://npm.pkg.github.com
+@jschmittler:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
 ```
 ```bash
 npm publish            # publishConfig.access = "restricted"
 ```
-Teammates set the same `@your-org:registry` line and `npm i -g @your-org/figma-walkthrough`.
+Teammates set the same `@jschmittler:registry` line and `npm i -g @jschmittler/figma-walkthrough`.
 
 ### Notes
 - Outputs are written to the **caller's current directory** (`./output`,

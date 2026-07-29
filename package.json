@@ -1,10 +1,21 @@
 {
-  "name": "@your-org/figma-walkthrough",
+  "name": "@jschmittler/figma-walkthrough",
   "version": "1.0.0",
   "description": "Record portfolio-quality automated walkthroughs of remotely hosted Figma prototypes (visible cursor, smooth scrolling) and export high-quality WebM — driven by a simple script.md.",
   "type": "module",
   "bin": {
     "figma-walkthrough": "bin/figma-walkthrough.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschmittler/figma-walkthrough.git"
+  },
+  "homepage": "https://github.com/jschmittler/figma-walkthrough#readme",
+  "bugs": {
+    "url": "https://github.com/jschmittler/figma-walkthrough/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "bin/",
